@@ -1,12 +1,11 @@
 import React from 'react';
 import './App.css';
+import Invoices from './components/Invoices';
 
 function App() {
   return (
     <div className="App">
-      <h1>
-        Hola Mundo
-      </h1>
+      <Invoices />
     </div>
   );
 }
