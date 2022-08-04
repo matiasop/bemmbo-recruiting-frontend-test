@@ -21,8 +21,8 @@ function InvoicesForm() {
 
   return (
     <>
-      <h1>Selecciona una factura</h1>
-      <div>
+      <h1 className="font-bold text-xl my-4">Selecciona una factura</h1>
+      <div className="flex flex-col align-center justify-center">
         {receivedInvoices.map((invoice) => (
           <Invoice
             key={invoice.id}
@@ -37,8 +37,8 @@ function InvoicesForm() {
         ))}
       </div>
 
-      <h1>Selecciona una nota de crédito</h1>
-      <div>
+      {selectedInvoiceId && <h1 className="font-bold text-xl my-4">Selecciona una nota de crédito</h1>}
+      <div className="flex flex-col align-center justify-center">
         {creditNotes.map((invoice) => (
           <Invoice
             key={invoice.id}
@@ -51,8 +51,8 @@ function InvoicesForm() {
             setSelectedId={setSelectedCreditNoteId}
           />
         ))}
-        {selectedCreditNoteId && <Modal clearForm={clearForm} />}
       </div>
+      {selectedCreditNoteId && <Modal clearForm={clearForm} />}
     </>
   );
 }

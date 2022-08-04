@@ -9,13 +9,22 @@ function Invoice({
   };
 
   return (
-    <div>
-      <input type="radio" value={id} checked={selected} onChange={handleChange} />
-      <p>{id}</p>
-      <p>{organizationId}</p>
-      <p>{amount}</p>
-      <p>{currency}</p>
-      <p>{type}</p>
+    <div className="flex align-center justify-center my-3 max-w-4xl self-center rounded px-4 py-2">
+      <input className="mx-2" type="radio" value={id} checked={selected} onChange={handleChange} />
+      <p className="mx-1">{id}</p>
+      <p className="mx-1">
+        (
+        {organizationId}
+        )
+      </p>
+      <p className="mx-2 ml-20">
+        $
+        {amount}
+      </p>
+      <p className="mx-2">
+        {currency}
+      </p>
+      <p className="mx-2">{type}</p>
     </div>
   );
 }
