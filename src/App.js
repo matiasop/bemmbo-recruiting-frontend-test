@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import Invoices from './components/Invoices';
+import InvoicesForm from './components/InvoicesForm';
 
 function App() {
   return (
     <div className="App">
-      <Invoices />
+      <InvoicesForm />
     </div>
   );
 }
